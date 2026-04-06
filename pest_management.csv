@@ -1,0 +1,31 @@
+Crop,Pest Name,Symptom,Infestation Level,Treatment,Risk Level
+Wheat,Aphids,Yellowing and curling of leaves; sticky honeydew,High,Neem Oil Spray 5% / Imidacloprid 17.8 SL,Low Organic / Medium Chemical
+Wheat,Termites,Drying of entire plant; roots eaten,High,Chlorpyrifos 20 EC seed treatment,High Chemical
+Wheat,Brown Rust,Orange-brown pustules on leaves,Medium,Propiconazole 25 EC,Medium Chemical
+Rice,Stem Borer,Dead heart in vegetative stage; whiteheads,Medium,Trichogramma cards (Bio) / Cartap Hydrochloride,Low Organic / High Chemical
+Rice,Brown Plant Hopper,Hopper burn; circular patches of drying,High,Pymetrozine 11.2% / Buprofezin,Medium Chemical
+Rice,Blast Disease,Spindle-shaped spots with grey center,High,Tricyclazole 75 WP,Medium Chemical
+Cotton,Pink Bollworm,Shedding of flowers; holes in bolls,High,Spinosad 45 SC / Quinalphos,Medium Chemical
+Cotton,Whitefly,Upward curling of leaves; sooty mold,High,Azadirachtin 1% / Spiromesifen,Low Organic / Medium Chemical
+Cotton,Jassids,Downward curling and red edges on leaves,Medium,Flonicamid 50 WG,Medium Chemical
+Maize,Fall Armyworm,Large ragged holes in leaves; sawdust-like frass,High,Emamectin Benzoate 5 SG / B. thuringiensis,Medium Chemical / Low Organic
+Maize,Stem Borer,Small shot holes in leaves; dead heart,Medium,Carbofuran 3G granules,High Chemical
+Sugarcane,Early Shoot Borer,Dead heart that can be easily pulled out,Medium,Chlorantraniliprole 18.5 SC,Medium Chemical
+Sugarcane,Red Rot,Reddening of internal tissues with acidic smell,High,Crop rotation; disease-free setts,Low Organic
+Tomato,Fruit Borer,Holes in fruits; caterpillars inside,High,Bacillus Thuringiensis / Flubendiamide,Low Organic / Medium Chemical
+Tomato,Leaf Miner,Serpentine white trails on leaves,Medium,Cyromazine 75 WP,Medium Chemical
+Tomato,Early Blight,Dark concentric rings on older leaves,High,Mancozeb 75 WP / Copper Oxychloride,Medium Chemical
+Potato,Late Blight,Water-soaked lesions on leaves; white fuzz,High,Metalaxyl + Mancozeb,High Chemical
+Potato,Aphids,Leaf curling and vector for viruses,Medium,Dimethoate 30 EC,Medium Chemical
+Groundnut,White Grub,Wilting of plants; grubs feeding on roots,High,Imidacloprid / Phorate 10G,Medium Chemical
+Groundnut,Tikka Disease,Dark brown circular spots with yellow halo,High,Chlorothalonil 75 WP,Medium Chemical
+Onion,Thrips,Silvery white blotches on leaves,Medium,Spinetoram / Fipronil 5 SC,Medium Chemical
+Onion,Purple Blotch,Purple lesions with yellow halos on leaves,High,Azoxystrobin + Tebuconazole,High Chemical
+Mango,Mango Hopper,Shedding of flowers and young fruits,High,Imidacloprid 17.8 SL,Medium Chemical
+Mango,Powdery Mildew,White powdery growth on panicles,Medium,Wettable Sulphur 80 WP,Low Chemical
+Apple,Codling Moth,Pinkish caterpillars inside the fruit,High,Spinosad,Medium Chemical
+Apple,Scab,Olive green spots on leaves and fruit,High,Captan 50 WP,Medium Chemical
+Various,Mealybugs,White cottony mass on stems and leaves,Medium,Soap Water/Neem Extract / Profenofos,Low Organic / High Chemical
+Various,Spider Mites,Fine webbing; yellow stippling on leaves,Medium,Abamectin / Spiromesifen,Medium Chemical
+Various,Nematodes,Stunted growth; root galls,High,Carbofuran / Marigold intercropping,High Chemical / Low Organic
+Various,Locusts,Mass defoliation of entire fields,Extreme,Malathion 50 EC / Aerial Spraying,High Chemical

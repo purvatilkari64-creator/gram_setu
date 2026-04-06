@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gram Gyan Setu — AI Agricultural Intelligence Platform</title>
+    <meta name="description" content="Gram Gyan Setu: India's AI-powered agricultural platform with crop recommendations, market prices, weather advisory, and more — in your language.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ═══ Top Header ═══ -->
+    <header class="top-header">
+        <span class="lang-label" data-i18n="langLabel">🌐 Language:</span>
+        <select id="langToggle" class="lang-select">
+            <option value="en">English</option>
+            <option value="hi">हिंदी (Hindi)</option>
+            <option value="mr">मराठी (Marathi)</option>
+        </select>
+    </header>
+
+    <!-- ═══ Main Layout ═══ -->
+    <div class="dashboard-layout">
+
+        <!-- ── Sidebar Navigation ── -->
+        <aside class="sidebar">
+            <div>
+                <div class="logo-section">
+                    <h2>🌾 <span data-i18n="appName">Gram Gyan Setu</span> <span class="app-badge">AI</span></h2>
+                </div>
+                <ul class="nav-links" id="mainNav">
+                    <li class="active" data-target="dashboard">
+                        <span class="nav-icon">🏠</span>
+                        <span data-i18n="navDashboard">Digital Farm View</span>
+                    </li>
+                    <li data-target="agri-advice">
+                        <span class="nav-icon">📖</span>
+                        <span data-i18n="navAdvisory">Smart Advisory</span>
+                    </li>
+                    <li data-target="pesticide">
+                        <span class="nav-icon">🧪</span>
+                        <span data-i18n="navPesticide">Pesticide Score</span>
+                    </li>
+                    <li data-target="vision">
+                        <span class="nav-icon">📸</span>
+                        <span>Crop Disease AI</span>
+                    </li>
+                    <li data-target="subsidy">
+                        <span class="nav-icon">🏦</span>
+                        <span>Govt. Subsidies</span>
+                    </li>
+                    <li data-target="livelihood">
+                        <span class="nav-icon">💼</span>
+                        <span data-i18n="navMarket">Marketplace</span>
+                    </li>
+                    <li data-target="education">
+                        <span class="nav-icon">🎓</span>
+                        <span data-i18n="navEducation">Education Hub</span>
+                    </li>
+                    <li data-target="profile">
+                        <span class="nav-icon">👤</span>
+                        <span data-i18n="navProfile">Profile</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="sidebar-footer">
+                <button class="btn btn-danger" id="logoutBtn" style="width:100%;" data-i18n="logout">Logout</button>
+            </div>
+        </aside>
+
+        <!-- ══ Main Content ══ -->
+        <main class="main-content">
+
+            <!-- Hero Banner -->
+            <div class="header-banner">
+                <h1 id="welcomeUser">Welcome to Gram Gyan Setu</h1>
+                <p data-i18n="welcomeSub">AI-powered agricultural intelligence for every farmer.</p>
+                <div class="feature-badges">
+                    <span class="feature-badge">🤖 ML Crop Engine</span>
+                    <span class="feature-badge">🌤 Live Weather</span>
+                    <span class="feature-badge">🎙 Voice Assistant</span>
+                    <span class="feature-badge">📊 Market Data</span>
+                    <span class="feature-badge">🌍 3 Languages</span>
+                </div>
+            </div>
+
+            <!-- ═══ VIEW: Digital Farm Dashboard ═══ -->
+            <div id="view-dashboard" class="content-view">
+                <div class="map-view">
+                    <div>
+                        <h2 data-i18n="droneView">Digital Agriculture Drone View</h2>
+                        <p data-i18n="droneSub"><strong>Crop:</strong> Wheat &nbsp;|&nbsp; <strong>Harvest:</strong> May 01, 2024</p>
+                    </div>
+                    <div class="plot-badge" data-i18n="plotArea">📍 Plot C4 (Needs Watering)</div>
+                </div>
+
+                <h2 class="section-title" data-i18n="overviewStats">
+                    <span class="title-icon">📊</span> Overview Statistics
+                </h2>
+                <div class="widget-grid" id="farmStatsWidget">
+                    <div class="widget">
+                        <h3 data-i18n="statInsect">🐛 Insect Level</h3>
+                        <div class="val" id="valInsect">--%</div>
+                    </div>
+                    <div class="widget">
+                        <h3 data-i18n="statWater">💧 Soil Moisture</h3>
+                        <div class="val" id="valWater">--%</div>
+                    </div>
+                    <div class="widget">
+                        <h3 data-i18n="statClay">🪨 Clay Level</h3>
+                        <div class="val" id="valClay">--%</div>
+                    </div>
+                    <div class="widget">
+                        <h3 data-i18n="statWeather">🌤️ Weather</h3>
+                        <div class="val" id="valWeather" style="font-size:1.4rem;margin-top:14px;">--</div>
+                    </div>
+                </div>
+
+                <h2 class="section-title" data-i18n="todayPriority">
+                    <span class="title-icon">⚡</span> Today's Insights
+                </h2>
+                <div id="insightsContainer"></div>
+
+                <h2 class="section-title" style="margin-top:28px;">
+                    <span class="title-icon">📰</span> Advisories
+                </h2>
+                <div class="grid-2" id="advisoryContainer"></div>
+            </div>
+
+            <!-- ═══ VIEW: Smart Advisory ═══ -->
+            <div id="view-agri-advice" class="content-view hidden">
+                <h2 class="section-title" data-i18n="advTitle">
+                    <span class="title-icon">📖</span> Smart Agriculture Advisory
+                </h2>
+                <p style="color:var(--text-secondary);margin-bottom:20px;" data-i18n="advDesc">AI-powered advisory in your language. Type a question or use the voice assistant.</p>
+                <div class="form-panel">
+                    <div class="chat-area" id="aiResponseArea">
+                        <div class="chat-msg chat-msg-ai">
+                            <strong>Gram Gyan AI</strong>
+                            <span data-i18n="aiWait">Ready to help! Ask me about crops, soil, weather, pests, fertilizers, or market prices.</span>
+                        </div>
+                    </div>
+                    <form id="chatForm" class="chat-input-row">
+                        <input type="text" id="chatInput" class="form-control" placeholder="Ask anything... (e.g., 'wheat market price', 'crop recommendation')" required>
+                        <button type="submit" class="btn btn-primary">Ask AI</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- ═══ VIEW: Pesticide Score ═══ -->
+            <div id="view-pesticide" class="content-view hidden">
+                <h2 class="section-title" data-i18n="pestTitle">
+                    <span class="title-icon">🧪</span> Pesticide Risk Scoring
+                </h2>
+                <div class="form-panel" style="max-width:600px;">
+                    <form id="riskForm">
+                        <div class="form-group">
+                            <label data-i18n="pestName">Chemical / Pesticide Name</label>
+                            <input type="text" id="chemName" class="form-control" required placeholder="e.g. Chlorpyrifos, Neem Oil">
+                        </div>
+                        <div class="form-group">
+                            <label>Target Crop / Certification</label>
+                            <select id="chemCrop" class="form-control" required>
+                                <option value="General">General / Domestic Use</option>
+                                <option value="Organic">Organic Farming</option>
+                                <option value="Export">Export Quality</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label data-i18n="pestDose">Dosage (per Hectare in L/Kg)</label>
+                            <input type="number" id="chemDosage" class="form-control" required step="0.1" placeholder="e.g. 2.5">
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width:100%;margin-top:8px;" data-i18n="pestBtn" id="riskSubmitBtn">Calculate Risk Score</button>
+                    </form>
+                    <div id="riskResult" class="risk-result hidden"></div>
+                </div>
+            </div>
+
+            <!-- ═══ VIEW: Marketplace ═══ -->
+            <div id="view-livelihood" class="content-view hidden">
+                <h2 class="section-title" data-i18n="markTitle">
+                    <span class="title-icon">💼</span> Agricultural Marketplace
+                </h2>
+                <div class="search-row">
+                    <input type="text" id="marketSearchInput" class="form-control" placeholder="Search by crop, category...">
+                    <button id="marketSearchBtn" class="btn btn-primary" data-i18n="markSearch">Search</button>
+                    <button id="viewCartBtn" class="btn cart-btn">🛒 <span data-i18n="markCart">Cart</span> (<span id="cartCount">0</span>)</button>
+                </div>
+                <div class="grid-3" id="marketContainer"></div>
+
+                <!-- Checkout -->
+                <div id="checkoutArea" class="checkout-panel hidden">
+                    <h3 data-i18n="checkTitle">Secure Checkout</h3>
+                    <div id="cartSummary" style="margin:12px 0;font-weight:600;"></div>
+                    <div class="form-group">
+                        <label data-i18n="checkPay">Payment Method</label>
+                        <select id="paymentMethod" class="form-control">
+                            <option value="UPI">UPI Payment (GPay / PhonePe)</option>
+                            <option value="COD">Cash on Delivery</option>
+                        </select>
+                    </div>
+                    <button id="placeOrderBtn" class="btn btn-primary" style="width:100%;" data-i18n="checkBtn">Place Order</button>
+                </div>
+            </div>
+
+            <!-- ═══ VIEW: Education Hub ═══ -->
+            <div id="view-education" class="content-view hidden">
+                <h2 class="section-title" data-i18n="eduTitle">
+                    <span class="title-icon">🎓</span> Education Hub
+                </h2>
+                <p style="color:var(--text-secondary);margin-bottom:20px;" data-i18n="eduSub">Curated learning paths for agriculture, finance, and crop management.</p>
+                <div class="search-row">
+                    <input type="text" id="eduSearchInput" class="form-control" placeholder="Search lessons...">
+                    <select id="eduCategoryFilter" class="form-control" style="max-width:200px;">
+                        <option value="All">All Categories</option>
+                        <option value="Irrigation">Irrigation</option>
+                        <option value="Finance">Finance</option>
+                        <option value="Crop Care">Crop Care</option>
+                        <option value="Soil Health">Soil Health</option>
+                        <option value="Government Schemes">Govt. Schemes</option>
+                        <option value="Pest Management">Pest Management</option>
+                        <option value="Planning">Planning</option>
+                    </select>
+                    <button id="eduSearchBtn" class="btn btn-primary" data-i18n="eduSearch">Search</button>
+                </div>
+                <div class="grid-3" id="educationContainer"></div>
+            </div>
+
+            <!-- ═══ VIEW: Crop Disease AI ═══ -->
+            <div id="view-vision" class="content-view hidden">
+                <h2 class="section-title" data-i18n="visionTitle">
+                    <span class="title-icon">📸</span> Crop Disease AI Scanner
+                </h2>
+                <div class="form-panel" style="text-align:center;max-width:600px;margin:0 auto;">
+                    <p style="color:var(--text-secondary);margin-bottom:24px;">Upload a leaf image for AI-powered disease detection.</p>
+                    <div class="scanner-box" id="scannerBox" onclick="document.getElementById('actualImageInput').click()">
+                        <span class="scanner-label" id="scannerText">📸 Tap to Upload Image</span>
+                        <img id="scanPreview" src="" class="hidden" alt="Scan Preview">
+                        <div id="scannerLine" class="scanner-line hidden"></div>
+                    </div>
+                    <input type="file" id="actualImageInput" accept="image/*" capture="environment" class="hidden">
+                    <button class="btn btn-primary" id="runScanBtn" style="margin-top:20px;width:100%;max-width:480px;" disabled>Run Deep Learning Scan</button>
+                    <div id="scanResult" class="scan-result hidden"></div>
+                </div>
+            </div>
+
+            <!-- ═══ VIEW: Subsidies ═══ -->
+            <div id="view-subsidy" class="content-view hidden">
+                <h2 class="section-title" data-i18n="subTitle">
+                    <span class="title-icon">🏦</span> Govt. Subsidy Eligibility
+                </h2>
+                <div class="form-panel" style="max-width:600px;">
+                    <form id="subsidyForm">
+                        <div class="form-group">
+                            <label>Farm Land Size (Hectares)</label>
+                            <input type="number" id="landArea" class="form-control" step="0.1" required placeholder="e.g. 1.5">
+                        </div>
+                        <div class="form-group">
+                            <label>Farmer Gender</label>
+                            <select id="farmGender" class="form-control" required>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Social Category</label>
+                            <select id="farmSocialCategory" class="form-control" required>
+                                <option value="General">General / OBC</option>
+                                <option value="SC">SC</option>
+                                <option value="ST">ST</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>State / Region</label>
+                            <select id="farmState" class="form-control" required>
+                                <option value="Maharashtra">Maharashtra</option>
+                                <option value="Punjab">Punjab</option>
+                                <option value="Gujarat">Gujarat</option>
+                                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width:100%;margin-top:8px;" id="subsidySubmitBtn">Evaluate Eligibility</button>
+                    </form>
+                    <div id="subsidyResult" class="hidden" style="margin-top:24px;display:grid;gap:12px;"></div>
+                </div>
+            </div>
+
+            <!-- ═══ VIEW: Profile ═══ -->
+            <div id="view-profile" class="content-view hidden">
+                <h2 class="section-title" data-i18n="profTitle">
+                    <span class="title-icon">👤</span> User Profile
+                </h2>
+                <div class="form-panel" style="text-align:center;max-width:480px;margin:0 auto;">
+                    <div class="profile-avatar">👤</div>
+                    <h3 id="profileName" style="margin-bottom:4px;">User Name</h3>
+                    <p style="color:var(--text-muted);font-size:0.85rem;" data-i18n="profStatus">Small / Marginal Farmer</p>
+                    <div class="profile-wallet">
+                        <div class="wallet-label">Wallet Balance</div>
+                        <div class="wallet-amount" id="profBal">₹1250</div>
+                    </div>
+                    <button class="btn btn-primary" style="width:100%;margin-bottom:10px;" data-i18n="profBtn">Add UPI Payment</button>
+                    <button class="btn btn-outline" style="width:100%;" onclick="alert('Digital KYC verified by e-Pramaan.')">View Digital KYC</button>
+                </div>
+            </div>
+
+            <!-- Voice FAB -->
+            <button class="fab-voice" id="voiceBtn" title="Tap to Speak">🎙️</button>
+
+            <!-- Global Chat FAB -->
+            <button class="fab-chat" id="globalChatBtn" title="Text Assistant">💬</button>
+            <div id="globalChatWidget" class="global-chat hidden">
+                <div class="chat-header">
+                    <span>🌾 Gram Gyan AI</span>
+                    <button id="closeGlobalChat">✕</button>
+                </div>
+                <div class="chat-body" id="globalChatBody">
+                    <div class="chat-msg chat-msg-ai">
+                        <strong>Gram Gyan AI</strong>
+                        Hello! I'm your assistant. Ask me about crops, weather, market prices, or any farming query.
+                    </div>
+                </div>
+                <div class="chat-footer">
+                    <form id="globalChatForm" class="chat-input-row">
+                        <input type="text" id="globalChatInput" class="form-control" placeholder="Ask something..." required>
+                        <button type="submit" class="btn btn-primary">Send</button>
+                    </form>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- ═══ Siri Voice Overlay ═══ -->
+    <div id="siriOverlay" class="siri-overlay hidden">
+        <button id="siriDismissBtn" class="siri-dismiss">✕ Dismiss</button>
+        <div style="text-align:center;max-width:540px;padding:0 20px;">
+            <div class="siri-status" id="siriStatus" style="color:rgba(255,255,255,0.5);margin-bottom:12px;">● LISTENING</div>
+            <div class="siri-text" id="siriText">Speak now...</div>
+            <div id="siriTranscript" style="color:rgba(255,255,255,0.6);font-size:1rem;margin-top:16px;min-height:28px;font-family:'Inter',sans-serif;"></div>
+        </div>
+        <div class="siri-orb"></div>
+        <div style="color:rgba(255,255,255,0.3);font-size:0.75rem;font-family:'Inter',sans-serif;margin-top:32px;letter-spacing:0.5px;">Powered by Gram Gyan Setu AI Engine</div>
+    </div>
+
+    <!-- ═══ Video Player Modal ═══ -->
+    <div id="videoModal" class="hidden" style="position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.92);z-index:1000;display:flex;align-items:center;justify-content:center;flex-direction:column;">
+        <button id="closeVideoBtn" style="position:absolute;top:20px;right:28px;background:none;border:none;color:white;font-size:2rem;cursor:pointer;">✕</button>
+        <h2 id="videoTitle" style="color:white;font-family:'Outfit',sans-serif;margin-bottom:16px;text-align:center;font-size:1.3rem;">Module Title</h2>
+        <div style="width:88%;max-width:860px;aspect-ratio:16/9;background:#000;border-radius:12px;overflow:hidden;">
+            <iframe id="youtubeFrame" width="100%" height="100%" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script src="translations.js?v=8.0"></script>
+    <script src="app.js?v=8.0"></script>
+</body>
+</html>

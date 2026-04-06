@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Gram Gyan Setu | Join the Smart Farming Revolution</title>
+    <meta name="description" content="Create your free account on Gram Gyan Setu - AI-powered agriculture intelligence for Indian farmers.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body { 
+            background: linear-gradient(160deg, #0f172a 0%, #064e3b 50%, #0f172a 100%);
+            min-height: 100vh;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .register-wrapper {
+            display: flex; gap: 0; max-width: 900px; width: 95%;
+            border-radius: 24px; overflow: hidden;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.4);
+        }
+        .register-hero {
+            flex: 1; padding: 50px 40px;
+            background: linear-gradient(160deg, #059669 0%, #047857 40%, #065f46 100%);
+            color: white; display: flex; flex-direction: column; justify-content: center;
+        }
+        .register-hero h1 { color: white; font-size: 2rem; margin: 0 0 15px; font-family: 'Outfit', sans-serif; }
+        .register-hero p { opacity: 0.85; font-size: 0.95rem; line-height: 1.6; margin: 0 0 25px; }
+        .feature-list { list-style: none; padding: 0; margin: 0; }
+        .feature-list li { padding: 8px 0; font-size: 0.95rem; opacity: 0.9; display: flex; align-items: center; gap: 10px; }
+        .register-form-side {
+            flex: 1; padding: 45px 40px;
+            background: white; display: flex; flex-direction: column; justify-content: center;
+        }
+        .register-form-side h2 { margin: 0 0 5px; font-family: 'Outfit', sans-serif; color: #059669; }
+        .register-form-side .subtitle { color: #6b7280; margin: 0 0 25px; font-size: 0.95rem; }
+        .input-group { margin-bottom: 18px; }
+        .input-group label { display: block; font-weight: 600; color: #374151; margin-bottom: 6px; font-size: 0.9rem; }
+        .input-group input {
+            width: 100%; padding: 13px 16px; border: 1.5px solid #e5e7eb; border-radius: 10px;
+            font-size: 1rem; background: #f9fafb; transition: all 0.2s; box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+        .input-group input:focus { border-color: #10b981; box-shadow: 0 0 0 4px rgba(16,185,129,0.1); outline: none; background: #fff; }
+        .error-msg { color: #ef4444; font-size: 0.9em; min-height: 20px; margin-bottom: 5px; font-weight: 500; }
+        .register-btn { 
+            width: 100%; padding: 14px; border: none; border-radius: 10px; font-size: 1rem; font-weight: 700;
+            background: linear-gradient(135deg, #10b981, #059669); color: white; cursor: pointer;
+            transition: all 0.3s; font-family: 'Inter', sans-serif;
+            box-shadow: 0 4px 15px rgba(16,185,129,0.3);
+        }
+        .register-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(16,185,129,0.4); }
+        .register-btn:active { transform: scale(0.98); }
+        .register-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+        .footer-link { text-align: center; margin-top: 20px; font-size: 0.9em; color: #6b7280; }
+        .footer-link a { color: #059669; font-weight: 600; text-decoration: none; }
+        .footer-link a:hover { text-decoration: underline; }
+        .pw-strength { height: 4px; border-radius: 2px; margin-top: 6px; transition: all 0.3s; }
+        @media (max-width: 768px) {
+            .register-hero { display: none; }
+            .register-wrapper { max-width: 420px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="register-wrapper fade-in">
+        <div class="register-hero">
+            <div style="font-size: 3rem; margin-bottom: 15px;">🌾</div>
+            <h1>Join Gram Gyan Setu</h1>
+            <p>Create your free account and unlock AI-powered farm intelligence designed for every Indian farmer.</p>
+            <ul class="feature-list">
+                <li>✅ ML-powered crop recommendations</li>
+                <li>✅ Real-time market price tracking</li>
+                <li>✅ Computer Vision disease detection</li>
+                <li>✅ Hindi, Marathi & English voice assistant</li>
+                <li>✅ Govt. subsidy eligibility engine</li>
+                <li>✅ Digital education & financial literacy</li>
+            </ul>
+        </div>
+        <div class="register-form-side">
+            <h2>Create Account</h2>
+            <p class="subtitle">It's free and takes less than 30 seconds</p>
+            
+            <div id="errorMsg" class="error-msg"></div>
+            
+            <form id="registerForm">
+                <div class="input-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" required placeholder="e.g. Rajesh Kumar" autocomplete="name">
+                </div>
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" required placeholder="your.email@example.com" autocomplete="email">
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required placeholder="Minimum 4 characters" autocomplete="new-password" minlength="4">
+                    <div class="pw-strength" id="pwStrength"></div>
+                </div>
+                <button type="submit" class="register-btn" id="registerBtn">Create My Account</button>
+            </form>
+            
+            <p class="footer-link">Already have an account? <a href="login.html">Sign in here</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Password strength indicator
+        document.getElementById('password').addEventListener('input', (e) => {
+            const bar = document.getElementById('pwStrength');
+            const len = e.target.value.length;
+            if (len === 0) { bar.style.width = '0'; bar.style.background = 'transparent'; }
+            else if (len < 4) { bar.style.width = '33%'; bar.style.background = '#ef4444'; }
+            else if (len < 8) { bar.style.width = '66%'; bar.style.background = '#f59e0b'; }
+            else { bar.style.width = '100%'; bar.style.background = '#10b981'; }
+        });
+
+        document.getElementById('registerForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn = document.getElementById('registerBtn');
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const name = document.getElementById('name').value;
+            const errorMsg = document.getElementById('errorMsg');
+            
+            btn.disabled = true;
+            btn.textContent = 'Creating account...';
+            errorMsg.textContent = '';
+            
+            try {
+                const response = await fetch('/api/register', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email, password, name })
+                });
+                
+                const data = await response.json();
+                
+                if (response.ok) {
+                    localStorage.setItem('user_id', data.user_id);
+                    localStorage.setItem('user_name', data.name);
+                    btn.textContent = '✓ Account Created! Redirecting...';
+                    setTimeout(() => { window.location.href = 'index.html'; }, 500);
+                } else {
+                    errorMsg.textContent = data.detail || 'Registration failed. Please try a different email.';
+                    btn.disabled = false;
+                    btn.textContent = 'Create My Account';
+                }
+            } catch (err) {
+                errorMsg.textContent = 'Unable to connect to server. Please check your connection.';
+                btn.disabled = false;
+                btn.textContent = 'Create My Account';
+            }
+        });
+    </script>
+</body>
+</html>

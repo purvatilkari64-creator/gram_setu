@@ -1,0 +1,31 @@
+Commodity,Category,State,Market,Min_Price,Max_Price,Modal_Price,Trend
+Wheat,Cereal,Punjab,Khanna,2125,2350,2275,Stable
+Wheat,Cereal,Haryana,Rohtak,2150,2400,2250,Stable
+Wheat,Cereal,Madhya Pradesh,Ujjain,2200,2600,2450,Rising
+Rice,Cereal,Punjab,Tarn Taran,3100,3600,3400,Rising
+Rice,Cereal,Andhra Pradesh,Vijayawada,3250,3850,3600,Rising
+Rice,Cereal,West Bengal,Burdwan,3050,3400,3200,Stable
+Maize,Cereal,Karnataka,Davangere,1850,2150,1980,Falling
+Maize,Cereal,Maharashtra,Jalna,1900,2250,2050,Stable
+Cotton,Cash Crop,Gujarat,Rajkot,6600,7300,6900,Rising
+Cotton,Cash Crop,Maharashtra,Amravati,6750,7500,7100,Stable
+Cotton,Cash Crop,Telangana,Guntur,6800,7600,7200,Rising
+Sugarcane,Cash Crop,Uttar Pradesh,Meerut,315,350,335,Stable
+Sugarcane,Cash Crop,Maharashtra,Kolhapur,320,380,350,Stable
+Soyabean,Oilseed,Madhya Pradesh,Indore,4600,5300,4950,Rising
+Soyabean,Oilseed,Maharashtra,Latur,4550,5100,4800,Falling
+Groundnut,Oilseed,Gujarat,Junagadh,5600,6400,6100,Stable
+Mustard,Oilseed,Rajasthan,Bharatpur,5200,5800,5500,Rising
+Tur (Red Gram),Pulse,Maharashtra,Akola,8500,10500,9800,Rising
+Chana (Bengal Gram),Pulse,Madhya Pradesh,Vidisha,4800,5600,5300,Stable
+Moong (Green Gram),Pulse,Rajasthan,Nagaur,7200,8100,7600,Rising
+Onion,Vegetable,Maharashtra,Lasalgaon,1500,3500,2800,Volatile
+Potato,Vegetable,Uttar Pradesh,Agra,800,1400,1100,Falling
+Tomato,Vegetable,Karnataka,Kolar,1200,3200,2400,Volatile
+Apple,Fruit,Himachal Pradesh,Shimla,4500,8500,6500,Stable
+Mango,Fruit,Uttar Pradesh,Malihabad,2500,4500,3500,Falling
+Banana,Fruit,Maharashtra,Jalgaon,1200,2200,1600,Stable
+Pomegranate,Fruit,Maharashtra,Solapur,6000,12000,8500,Rising
+Chilli (Dry),Spice,Andhra Pradesh,Guntur,15000,24000,19500,Stable
+Turmeric,Spice,Telangana,Nizamabad,8500,13500,11000,Rising
+Garlic,Spice,Madhya Pradesh,Mandsaur,4500,9500,8000,Volatile

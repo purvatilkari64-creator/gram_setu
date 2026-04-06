@@ -1,0 +1,10 @@
+Crop,Min_Water_Level,Max_Water_Level,Ideal_Clay_Composition,Pesticide_Tolerance_Score,Irrigation_Method
+Wheat,60,80,60,65,Sprinkler/Canal
+Rice,85,95,85,80,Flooding
+Cotton,55,75,70,75,Drip
+Maize,65,85,55,60,Sprinkler
+Sugarcane,75,90,75,85,Furrow
+Apple,50,70,50,60,Drip
+Mango,45,65,45,55,Basin
+Soyabean,55,75,65,70,Sprinkler
+Groundnut,40,60,40,50,Sprinkler

@@ -1,0 +1,28 @@
+Soil Type,Crop Type,Nitrogen,Phosphorus,Potassium,Ideal pH,Micronutrient Need,Fertilizer Name,Organic Alternative
+Sandy,Wheat,120,40,30,6.0-7.0,Zinc,Urea / DAP Combo,Bone Meal + Composted Manure
+Loamy,Wheat,100,50,40,6.5-7.5,Manganese,DAP,Neem Cake + Vermicompost
+Clayey,Wheat,110,40,30,6.2-7.8,None,14-35-14 / CAN,Green Manure
+Sandy,Rice,100,50,50,5.5-6.5,Iron,Ammonium Sulphate,Poultry Manure
+Loamy,Rice,90,40,40,5.5-6.5,Zinc,Urea / NPK 20-20-20,Blood Meal
+Clayey,Rice,120,60,60,6.0-7.0,Iron,NPK 14-35-14,Fish Emulsion
+Sandy,Maize,120,60,40,5.8-7.0,Zinc,DAP / MOP,Farmyard Manure
+Loamy,Maize,100,50,40,6.0-7.2,Zinc,Urea,Compost Tea
+Clayey,Maize,130,70,50,6.0-7.5,Manganese,Complex 10-26-26,Alfalfa Meal
+Sandy,Cotton,100,50,50,6.0-7.5,Boron,CAN + SSP,Compost
+Loamy,Cotton,120,60,60,6.5-7.5,Zinc,DAP / MOP,Neem Cake
+Clayey,Cotton,140,80,80,6.0-8.0,Magnesium,NPK 14-35-14,Cottonseed Meal
+Sandy,Sugarcane,250,100,100,6.0-7.5,Iron,Urea / SSP,Press Mud
+Loamy,Sugarcane,200,80,80,6.5-7.5,Zinc,Complex 10-26-26,Vermicompost
+Clayey,Sugarcane,270,110,110,6.5-8.0,None,Urea / MOP,Filter Cake
+Sandy,Soyabean,20,60,40,6.0-6.8,Molybdenum,SSP / MOP,Rhizobium Inoculant
+Loamy,Soyabean,25,80,40,6.5-7.0,Zinc,DAP,Green Manure
+Clayey,Soyabean,30,90,50,6.5-7.5,Manganese,DAP + SSP,Seaweed Extract
+Sandy,Groundnut,15,50,25,6.0-6.5,Calcium (Gypsum),SSP,Gypsum / Compost
+Loamy,Groundnut,25,60,30,6.0-7.0,Boron,Complex 10-26-26,Neem Cake
+Clayey,Groundnut,20,70,40,6.5-7.5,Iron,SSP / MOP,Wood Ash (Potassium)
+All Types,Pulses,20,50,20,6.5-7.5,Molybdenum,DAP,Rhizobium treatment
+All Types,Mango,100,50,100,6.0-7.5,Zinc,NPK 19-19-19 Foliar,Cow Dung Slurry
+All Types,Apple,80,40,60,6.0-7.0,Calcium,Calcium Nitrate,Limestone + Compost
+All Types,Tomato,150,80,100,6.0-6.8,Calcium,NPK 12-32-16,Eggshells / Bone Meal
+All Types,Potato,120,80,120,5.0-6.0,Magnesium,NPK 10-26-26,Ash + Chicken Manure
+All Types,Onion,100,50,50,6.0-7.0,Sulphur,Ammonium Sulphate,Mustard Cake
